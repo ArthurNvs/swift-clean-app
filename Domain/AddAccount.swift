@@ -7,7 +7,7 @@ public protocol AddAccount {
            completion: @escaping (Result<AccountModel, Error>) -> Void) //callback
 }
 
-public struct AddAccountModel: Encodable {
+public struct AddAccountModel: Model {
   public var name: String
   public var email: String
   public var password: String
