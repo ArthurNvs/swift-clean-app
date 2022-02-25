@@ -15,7 +15,7 @@ class AlamofireAdapter {
 }
 
 class AlamofireAdapterTests: XCTestCase {
-  func test_ensure_adapter_receives_valid_url() {
+  func test_post_should_make_request_with_valid_url_and_method() {
     let url = makeUrl()
     let configuration = URLSessionConfiguration.default
     configuration.protocolClasses = [UrlProtocolStub.self]
@@ -33,6 +33,7 @@ class AlamofireAdapterTests: XCTestCase {
 }
 
 // This is a generic stub that can be used with any request framework
+// He intercepts request so we can verify data and test it
 class UrlProtocolStub: URLProtocol {
   static var emit: ((URLRequest) -> Void)?
   
