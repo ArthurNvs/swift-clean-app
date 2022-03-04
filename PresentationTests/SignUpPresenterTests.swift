@@ -9,6 +9,7 @@ class SignUpPresenter {
     self.alertView = alertView
   }
   
+  // Presenter sends to AlertView the message
   func signUp(viewModel: SignUpViewModel) {
     if viewModel.name == nil || viewModel.name!.isEmpty {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Name is required"))
