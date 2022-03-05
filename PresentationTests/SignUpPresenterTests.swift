@@ -35,8 +35,7 @@ struct SignUpViewModel {
 
 class SignUpPresenterTests: XCTestCase {
   func test_signup_should_show_error_message_if_name_is_not_provided() {
-    let alertViewSpy = AlertViewSpy()
-    let sut = SignUpPresenter(alertView: alertViewSpy)
+    let (sut, alertViewSpy) = makeSut()
     let signUpViewModel = SignUpViewModel(email: "any_email@mail.com", password: "any_pswd", passwordConfirmation: "any_pswd")
     sut.signUp(viewModel: signUpViewModel)
     XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Validation failed", message: "Name is required"))
@@ -44,6 +43,11 @@ class SignUpPresenterTests: XCTestCase {
 }
 
 extension SignUpPresenterTests {
+  func makeSut() -> (sut: SignUpPresenter, alertViewSpy: AlertViewSpy) {
+    let alertViewSpy = AlertViewSpy()
+    let sut = SignUpPresenter(alertView: alertViewSpy)
+    return (sut, alertViewSpy)
+  }
   class AlertViewSpy: AlertView {
     var viewModel: AlertViewModel?
     
