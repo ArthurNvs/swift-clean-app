@@ -1,50 +1,7 @@
 //  Created by Arthur Neves on 04/03/22.
 
 import XCTest
-
-class SignUpPresenter {
-  private let alertView: AlertView
-  
-  init(alertView: AlertView) {
-    self.alertView = alertView
-  }
-  
-  // Presenter sends to AlertView the message (after logic)
-  func signUp(viewModel: SignUpViewModel) {
-    if let message = validate(viewModel: viewModel) {
-      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
-    }
-  }
-  
-  private func validate(viewModel: SignUpViewModel) -> String? {
-    if viewModel.name == nil || viewModel.name!.isEmpty {
-      return "Name is required"
-    } else if viewModel.email == nil || viewModel.email!.isEmpty {
-      return "Email is required"
-    } else if viewModel.password == nil || viewModel.password!.isEmpty {
-      return "Password is required"
-    } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-      return "Password confirmation is required"
-    }
-    return nil
-  }
-}
-
-protocol AlertView {
-  func showMessage(viewModel: AlertViewModel)
-}
-
-struct AlertViewModel: Equatable {
-  var title: String
-  var message: String
-}
-
-struct SignUpViewModel {
-  var name: String?
-  var email: String?
-  var password: String?
-  var passwordConfirmation: String?
-}
+import Presentation
 
 class SignUpPresenterTests: XCTestCase {
   func test_signup_should_show_error_message_if_name_is_not_provided() {
