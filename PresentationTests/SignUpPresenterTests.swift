@@ -9,10 +9,13 @@ class SignUpPresenter {
     self.alertView = alertView
   }
   
-  // Presenter sends to AlertView the message
+  // Presenter sends to AlertView the message (after logic)
   func signUp(viewModel: SignUpViewModel) {
     if viewModel.name == nil || viewModel.name!.isEmpty {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Name is required"))
+    }
+    if viewModel.email == nil || viewModel.email!.isEmpty {
+      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Email is required"))
     }
   }
 }
@@ -39,6 +42,13 @@ class SignUpPresenterTests: XCTestCase {
     let signUpViewModel = SignUpViewModel(email: "any_email@mail.com", password: "any_pswd", passwordConfirmation: "any_pswd")
     sut.signUp(viewModel: signUpViewModel)
     XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Validation failed", message: "Name is required"))
+  }
+  
+  func test_signup_should_show_error_message_if_email_is_not_provided() {
+    let (sut, alertViewSpy) = makeSut()
+    let signUpViewModel = SignUpViewModel(name: "any_name", password: "any_pswd", passwordConfirmation: "any_pswd")
+    sut.signUp(viewModel: signUpViewModel)
+    XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Validation failed", message: "Email is required"))
   }
 }
 
