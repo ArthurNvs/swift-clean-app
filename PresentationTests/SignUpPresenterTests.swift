@@ -11,15 +11,22 @@ class SignUpPresenter {
   
   // Presenter sends to AlertView the message (after logic)
   func signUp(viewModel: SignUpViewModel) {
-    if viewModel.name == nil || viewModel.name!.isEmpty {
-      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Name is required"))
-    } else if viewModel.email == nil || viewModel.email!.isEmpty {
-      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Email is required"))
-    } else if viewModel.password == nil || viewModel.password!.isEmpty {
-      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Password is required"))
-    } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: "Password confirmation is required"))
+    if let message = validate(viewModel: viewModel) {
+      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
     }
+  }
+  
+  private func validate(viewModel: SignUpViewModel) -> String? {
+    if viewModel.name == nil || viewModel.name!.isEmpty {
+      return "Name is required"
+    } else if viewModel.email == nil || viewModel.email!.isEmpty {
+      return "Email is required"
+    } else if viewModel.password == nil || viewModel.password!.isEmpty {
+      return "Password is required"
+    } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
+      return "Password confirmation is required"
+    }
+    return nil
   }
 }
 
