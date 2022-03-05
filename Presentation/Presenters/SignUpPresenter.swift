@@ -1,20 +1,26 @@
 //  Created by Arthur Neves on 05/03/22.
 
 import Foundation
+import Domain
 
 public class SignUpPresenter {
   private let alertView: AlertView
   private let emailValidator: EmailValidator
+  private let addAccount: AddAccount
   
-  public init(alertView: AlertView, emailValidator: EmailValidator) {
+  public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount) {
     self.alertView = alertView
     self.emailValidator = emailValidator
+    self.addAccount = addAccount
   }
   
   // Presenter sends to AlertView the message (after logic)
   public func signUp(viewModel: SignUpViewModel) {
     if let message = validate(viewModel: viewModel) {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
+    } else {
+      let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
+      addAccount.add(addAccountModel: addAccountModel) { _ in }
     }
   }
   
