@@ -4,9 +4,11 @@ import Foundation
 
 public class SignUpPresenter {
   private let alertView: AlertView
+  private let emailValidator: EmailValidator
   
-  public init(alertView: AlertView) {
+  public init(alertView: AlertView, emailValidator: EmailValidator) {
     self.alertView = alertView
+    self.emailValidator = emailValidator
   }
   
   // Presenter sends to AlertView the message (after logic)
@@ -28,6 +30,7 @@ public class SignUpPresenter {
     } else if viewModel.password != viewModel.passwordConfirmation {
       return "Passwords don't match"
     }
+    _ = emailValidator.isValid(email: viewModel.email!)
     return nil
   }
 }
