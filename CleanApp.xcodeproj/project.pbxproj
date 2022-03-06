@@ -13,6 +13,7 @@
 		E712226C27D3FF1200F7F1B8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712226B27D3FF1200F7F1B8 /* AlertView.swift */; };
 		E712227127D404A400F7F1B8 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712227027D404A400F7F1B8 /* EmailValidator.swift */; };
 		E712227227D418FC00F7F1B8 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C05F0227C6A9DC00891876 /* AccountModelFactory.swift */; };
+		E712227327D4E71600F7F1B8 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C05EFB27C6A87700891876 /* TestExtensions.swift */; };
 		E7A528AC27D16826006DA170 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528AB27D16826006DA170 /* AlamofireAdapter.swift */; };
 		E7A528B027D16935006DA170 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528AF27D16935006DA170 /* UrlProtocolStub.swift */; };
 		E7A528B827D16C88006DA170 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528B727D16C88006DA170 /* AddAccountIntegrationTests.swift */; };
@@ -821,6 +822,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E712227227D418FC00F7F1B8 /* AccountModelFactory.swift in Sources */,
+				E712227327D4E71600F7F1B8 /* TestExtensions.swift in Sources */,
 				E7A528D527D2279B006DA170 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
