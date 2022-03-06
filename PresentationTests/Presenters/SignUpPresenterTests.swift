@@ -63,8 +63,18 @@ class SignUpPresenterTests: XCTestCase {
     sut.signUp(viewModel: makeSignUpViewModel())
     XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
   }
+  
+  func test_signup_should_show_error_message_if_addAccount_fails() {
+    let alertViewSpy = AlertViewSpy()
+    let addAccountSpy = AddAccountSpy()
+    let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+    sut.signUp(viewModel: makeSignUpViewModel())
+    addAccountSpy.completeWithError(.unexpected)
+    XCTAssertEqual(alertViewSpy.viewModel, makeErrorAlertViewModel(message: "Something went wrong, try again later."))
+  }
 }
 
+// MARK: - TEST HELPERS
 extension SignUpPresenterTests {
   func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SignUpPresenter {
     let sut = SignUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
@@ -81,6 +91,10 @@ extension SignUpPresenterTests {
   
   func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
     return AlertViewModel(title: "Validation failed", message: "\(fieldName) is not valid")
+  }
+  
+  func makeErrorAlertViewModel(message: String) -> AlertViewModel {
+    return AlertViewModel(title: "Error", message: message)
   }
   
   class AlertViewSpy: AlertView {
@@ -107,9 +121,15 @@ extension SignUpPresenterTests {
   
   class AddAccountSpy: AddAccount {
     var addAccountModel: AddAccountModel?
+    var completion: ((Result<AccountModel, DomainError>) -> Void)?
     
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
       self.addAccountModel = addAccountModel
+      self.completion = completion
+    }
+    
+    func completeWithError(_ error: DomainError) {
+      completion?(.failure(error))
     }
   }
 }

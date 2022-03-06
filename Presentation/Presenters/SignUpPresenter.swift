@@ -14,13 +14,18 @@ public class SignUpPresenter {
     self.addAccount = addAccount
   }
   
-  // Presenter sends to AlertView the message (after logic)
+  // Presenter sends to AlertView the message (after logics)
   public func signUp(viewModel: SignUpViewModel) {
     if let message = validate(viewModel: viewModel) {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
     } else {
       let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
-      addAccount.add(addAccountModel: addAccountModel) { _ in }
+      addAccount.add(addAccountModel: addAccountModel) { result in
+        switch result {
+        case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Something went wrong, try again later."))
+        case .success: break
+        }
+      }
     }
   }
   
