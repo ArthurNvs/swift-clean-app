@@ -21,14 +21,15 @@ public class SignUpPresenter {
     if let message = validate(viewModel: viewModel) {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
     } else {
-      loadingView.display(viewModel: LoadingViewModel(isLoading: true))
       let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
+      loadingView.display(viewModel: LoadingViewModel(isLoading: true))
       addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
         guard let self = self else { return }
         switch result {
         case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Something went wrong, try again later."))
         case .success: break
         }
+        self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
       }
     }
   }
