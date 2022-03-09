@@ -24,6 +24,8 @@
 		E712228927D778E800F7F1B8 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712228827D778E800F7F1B8 /* TestFactories.swift */; };
 		E712229727D77BD600F7F1B8 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E712228F27D77BD600F7F1B8 /* UI.framework */; };
 		E712229C27D77BD600F7F1B8 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712229B27D77BD600F7F1B8 /* SignUpViewControllerTests.swift */; };
+		E7A3456327D8266F001DB681 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A528C827D2279B006DA170 /* Presentation.framework */; };
+		E7A3456427D8266F001DB681 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7A528C827D2279B006DA170 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7A528AC27D16826006DA170 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528AB27D16826006DA170 /* AlamofireAdapter.swift */; };
 		E7A528B027D16935006DA170 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528AF27D16935006DA170 /* UrlProtocolStub.swift */; };
 		E7A528B827D16C88006DA170 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528B727D16C88006DA170 /* AddAccountIntegrationTests.swift */; };
@@ -69,6 +71,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E712228E27D77BD600F7F1B8;
 			remoteInfo = UI;
+		};
+		E7A3456527D8266F001DB681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7AEE7EC27C27080005FBF16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A528C727D2279B006DA170;
+			remoteInfo = Presentation;
 		};
 		E7A528BA27D16C88006DA170 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -136,6 +145,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E712226627D3FEA400F7F1B8 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3456727D8266F001DB681 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7A3456427D8266F001DB681 /* Presentation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A3456327D8266F001DB681 /* Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,13 +395,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		E712229027D77BD600F7F1B8 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		E712229A27D77BD600F7F1B8 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,7 +461,6 @@
 				E7A528B627D16C88006DA170 /* UseCasesIntegrationTests */,
 				E7A528C927D2279B006DA170 /* Presentation */,
 				E7A528D327D2279B006DA170 /* PresentationTests */,
-				E712229027D77BD600F7F1B8 /* UI */,
 				E712229A27D77BD600F7F1B8 /* UITests */,
 				E7AEE7F627C27080005FBF16 /* Products */,
 				E7AEE82927C27588005FBF16 /* Frameworks */,
@@ -649,10 +662,12 @@
 				E712228B27D77BD600F7F1B8 /* Sources */,
 				E712228C27D77BD600F7F1B8 /* Frameworks */,
 				E712228D27D77BD600F7F1B8 /* Resources */,
+				E7A3456727D8266F001DB681 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E7A3456627D8266F001DB681 /* PBXTargetDependency */,
 			);
 			name = UI;
 			productName = UI;
@@ -1099,6 +1114,11 @@
 			target = E712228E27D77BD600F7F1B8 /* UI */;
 			targetProxy = E712229827D77BD600F7F1B8 /* PBXContainerItemProxy */;
 		};
+		E7A3456627D8266F001DB681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A528C727D2279B006DA170 /* Presentation */;
+			targetProxy = E7A3456527D8266F001DB681 /* PBXContainerItemProxy */;
+		};
 		E7A528BB27D16C88006DA170 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7AEE81327C27532005FBF16 /* Data */;
@@ -1166,6 +1186,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1195,6 +1216,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1211,6 +1233,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1227,6 +1250,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1243,6 +1267,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1259,6 +1284,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1289,6 +1315,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1320,6 +1347,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1337,6 +1365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1354,6 +1383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1506,6 +1536,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1537,6 +1568,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1567,6 +1599,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1598,6 +1631,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1615,6 +1649,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1632,6 +1667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1662,6 +1698,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1693,6 +1730,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1710,6 +1748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1727,6 +1766,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
