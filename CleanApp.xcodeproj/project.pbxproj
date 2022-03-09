@@ -26,6 +26,8 @@
 		E712229C27D77BD600F7F1B8 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712229B27D77BD600F7F1B8 /* SignUpViewControllerTests.swift */; };
 		E7A3456327D8266F001DB681 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A528C827D2279B006DA170 /* Presentation.framework */; };
 		E7A3456427D8266F001DB681 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7A528C827D2279B006DA170 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7A3456A27D82F2A001DB681 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3456927D82F2A001DB681 /* SignUpViewController.swift */; };
+		E7A3456C27D82F5C001DB681 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A3456B27D82F5C001DB681 /* SignUp.storyboard */; };
 		E7A528AC27D16826006DA170 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528AB27D16826006DA170 /* AlamofireAdapter.swift */; };
 		E7A528B027D16935006DA170 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528AF27D16935006DA170 /* UrlProtocolStub.swift */; };
 		E7A528B827D16C88006DA170 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528B727D16C88006DA170 /* AddAccountIntegrationTests.swift */; };
@@ -199,6 +201,8 @@
 		E712228F27D77BD600F7F1B8 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E712229627D77BD600F7F1B8 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E712229B27D77BD600F7F1B8 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
+		E7A3456927D82F2A001DB681 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E7A3456B27D82F5C001DB681 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		E7A528AB27D16826006DA170 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		E7A528AF27D16935006DA170 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		E7A528B527D16C88006DA170 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,6 +407,15 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		E7A3456827D82E73001DB681 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3456927D82F2A001DB681 /* SignUpViewController.swift */,
+				E7A3456B27D82F5C001DB681 /* SignUp.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		E7A528AD27D16899006DA170 /* Http */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +474,7 @@
 				E7A528B627D16C88006DA170 /* UseCasesIntegrationTests */,
 				E7A528C927D2279B006DA170 /* Presentation */,
 				E7A528D327D2279B006DA170 /* PresentationTests */,
+				E7A3456827D82E73001DB681 /* UI */,
 				E712229A27D77BD600F7F1B8 /* UITests */,
 				E7AEE7F627C27080005FBF16 /* Products */,
 				E7AEE82927C27588005FBF16 /* Frameworks */,
@@ -859,6 +873,7 @@
 				TargetAttributes = {
 					E712228E27D77BD600F7F1B8 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					E712229527D77BD600F7F1B8 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -928,6 +943,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A3456C27D82F5C001DB681 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,6 +1017,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A3456A27D82F2A001DB681 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1165,6 +1182,7 @@
 		E712229F27D77BD600F7F1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1188,6 +1206,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1195,6 +1214,7 @@
 		E71222A027D77BD600F7F1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1225,6 +1245,7 @@
 		E71222A227D77BD600F7F1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1242,6 +1263,7 @@
 		E71222A327D77BD600F7F1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
