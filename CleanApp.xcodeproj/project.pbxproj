@@ -47,6 +47,7 @@
 		E7AEE83F27C2D72A005FBF16 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEE83E27C2D72A005FBF16 /* HttpError.swift */; };
 		E7AEE84227C505D1005FBF16 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEE84127C505D1005FBF16 /* ExtensionHelpers.swift */; };
 		E7B472E727E0206B00B01C85 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B472E627E0206B00B01C85 /* UIViewControllerExtensions.swift */; };
+		E7B472E927E0217400B01C85 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B472E827E0217400B01C85 /* Storyboarded.swift */; };
 		E7B706AB27C6D88A00A1A7AD /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B706A327C6D88A00A1A7AD /* Infra.framework */; };
 		E7B706B027C6D88A00A1A7AD /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B706AF27C6D88A00A1A7AD /* AlamofireAdapterTests.swift */; };
 		E7B706B827C6DA9300A1A7AD /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AEE81427C27532005FBF16 /* Data.framework */; };
@@ -225,6 +226,7 @@
 		E7AEE83E27C2D72A005FBF16 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		E7AEE84127C505D1005FBF16 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		E7B472E627E0206B00B01C85 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E7B472E827E0217400B01C85 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		E7B706A327C6D88A00A1A7AD /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B706AA27C6D88A00A1A7AD /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B706AF27C6D88A00A1A7AD /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
@@ -602,6 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B472E627E0206B00B01C85 /* UIViewControllerExtensions.swift */,
+				E7B472E827E0217400B01C85 /* Storyboarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1073,6 +1076,7 @@
 			files = (
 				E7B472E727E0206B00B01C85 /* UIViewControllerExtensions.swift in Sources */,
 				E7A3456A27D82F2A001DB681 /* SignUpViewController.swift in Sources */,
+				E7B472E927E0217400B01C85 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

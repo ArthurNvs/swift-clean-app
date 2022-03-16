@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 import Presentation
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController, Storyboarded {
   @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
   @IBOutlet weak var saveButton: UIButton!
   @IBOutlet weak var nameTextField: UITextField!
