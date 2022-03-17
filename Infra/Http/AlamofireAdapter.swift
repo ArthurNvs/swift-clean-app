@@ -33,7 +33,6 @@ public final class AlamofireAdapter: HttpPostClient {
         default:
           completion(.failure(.noConnectivity))
         }
-        
       }
     }
   }
