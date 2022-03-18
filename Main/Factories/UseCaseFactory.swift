@@ -6,9 +6,14 @@ import Data
 import Infra
 
 final class UseCaseFactory {
+  private static let httpClient = AlamofireAdapter()
+  private static let apiBaseUrl = "http://localhost:5050/api"
+  
+  private static func makeUrl(path: String) -> URL {
+    return URL(string: "\(apiBaseUrl)/\(path)")!
+  }
+  
   static func makeRemoteAddAccount() -> AddAccount {
-    let alamofireAdapter = AlamofireAdapter()
-    let url = URL(string: "http://localhost:5050/api/signup")!
-    return RemoteAddAccount(url: url, httpClient: alamofireAdapter)
+    return RemoteAddAccount(url: makeUrl(path: "signup"), httpClient: httpClient)
   }
 }
