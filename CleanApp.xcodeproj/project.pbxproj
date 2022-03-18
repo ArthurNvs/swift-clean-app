@@ -83,6 +83,9 @@
 		E7C64A8927E2BAB100333753 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A8827E2BAB100333753 /* ControllerFactory.swift */; };
 		E7C64A8B27E34B2D00333753 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A8A27E34B2D00333753 /* UseCaseFactory.swift */; };
 		E7C64A8E27E34C3A00333753 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A8D27E34C3A00333753 /* SignUpComposer.swift */; };
+		E7C64A9027E34FB700333753 /* SignUpIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A8F27E34FB700333753 /* SignUpIntegrationTest.swift */; };
+		E7C64A9127E3509900333753 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712228327D777E500F7F1B8 /* AddAccountSpy.swift */; };
+		E7C64A9227E350DF00333753 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C05EFB27C6A87700891876 /* TestExtensions.swift */; };
 		E7C69D5127E012F700A3ED94 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C69D5027E012F700A3ED94 /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -370,6 +373,7 @@
 		E7C64A8827E2BAB100333753 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		E7C64A8A27E34B2D00333753 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		E7C64A8D27E34C3A00333753 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		E7C64A8F27E34FB700333753 /* SignUpIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTest.swift; sourceTree = "<group>"; };
 		E7C69D5027E012F700A3ED94 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -864,6 +868,7 @@
 		E7C64A5627E2B6D000333753 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
+				E7C64A8F27E34FB700333753 /* SignUpIntegrationTest.swift */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1322,6 +1327,7 @@
 					};
 					E7C64A5227E2B6D000333753 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = E7C64A3D27E2B6CE00333753;
 					};
 					E7C64A5C27E2B6D000333753 = {
@@ -1617,6 +1623,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C64A9127E3509900333753 /* AddAccountSpy.swift in Sources */,
+				E7C64A9227E350DF00333753 /* TestExtensions.swift in Sources */,
+				E7C64A9027E34FB700333753 /* SignUpIntegrationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2529,14 +2538,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Main.app/Main";
@@ -2548,10 +2564,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nvs.arthur.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

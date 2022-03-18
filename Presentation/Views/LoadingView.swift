@@ -2,7 +2,7 @@
 
 import Foundation
 
-public protocol LoadingView {
+public protocol LoadingView: class {
   func display(viewModel: LoadingViewModel)
 }
 
