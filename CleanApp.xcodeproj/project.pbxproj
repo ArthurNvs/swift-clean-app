@@ -86,6 +86,7 @@
 		E7C64A9027E34FB700333753 /* SignUpIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A8F27E34FB700333753 /* SignUpIntegrationTest.swift */; };
 		E7C64A9127E3509900333753 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712228327D777E500F7F1B8 /* AddAccountSpy.swift */; };
 		E7C64A9227E350DF00333753 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C05EFB27C6A87700891876 /* TestExtensions.swift */; };
+		E7C64A9527E4073E00333753 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A9427E4073E00333753 /* WeakVarProxy.swift */; };
 		E7C69D5127E012F700A3ED94 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C69D5027E012F700A3ED94 /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -374,6 +375,7 @@
 		E7C64A8A27E34B2D00333753 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		E7C64A8D27E34C3A00333753 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		E7C64A8F27E34FB700333753 /* SignUpIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTest.swift; sourceTree = "<group>"; };
+		E7C64A9427E4073E00333753 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		E7C69D5027E012F700A3ED94 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -854,6 +856,7 @@
 		E7C64A3F27E2B6CE00333753 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E7C64A9327E4073000333753 /* Proxies */,
 				E7C64A8C27E34C2600333753 /* Composers */,
 				E7C64A8727E2BA9A00333753 /* Factories */,
 				E7C64A4027E2B6CE00333753 /* AppDelegate.swift */,
@@ -888,6 +891,14 @@
 				E7C64A8D27E34C3A00333753 /* SignUpComposer.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		E7C64A9327E4073000333753 /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				E7C64A9427E4073E00333753 /* WeakVarProxy.swift */,
+			);
+			path = Proxies;
 			sourceTree = "<group>";
 		};
 		E7C69D4B27E0125700A3ED94 /* SignUp */ = {
@@ -1615,6 +1626,7 @@
 				E7C64A4127E2B6CE00333753 /* AppDelegate.swift in Sources */,
 				E7C64A8927E2BAB100333753 /* ControllerFactory.swift in Sources */,
 				E7C64A4327E2B6CE00333753 /* SceneDelegate.swift in Sources */,
+				E7C64A9527E4073E00333753 /* WeakVarProxy.swift in Sources */,
 				E7C64A8E27E34C3A00333753 /* SignUpComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
