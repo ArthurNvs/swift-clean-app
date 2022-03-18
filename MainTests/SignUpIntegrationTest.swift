@@ -4,7 +4,7 @@ import XCTest
 import Main
 
 class SignUpIntegrationTest: XCTestCase {
-  func test_() {
+  func test_ui_and_presentation_integration() {
     let sut = SignUpComposer.composeControllerWith(AddAccountSpy())
     checkMemoryLeak(for: sut)
   }

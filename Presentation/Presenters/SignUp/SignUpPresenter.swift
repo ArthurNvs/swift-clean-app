@@ -4,10 +4,10 @@ import Foundation
 import Domain
 
 public class SignUpPresenter {
-  private weak var alertView: AlertView?
+  private let alertView: AlertView
   private let emailValidator: EmailValidator
   private let addAccount: AddAccount
-  private weak var loadingView: LoadingView?
+  private let loadingView: LoadingView
   
   public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
     self.alertView = alertView
@@ -19,16 +19,16 @@ public class SignUpPresenter {
   // Presenter sends to AlertView the message (after logics)
   public func signUp(viewModel: SignUpViewModel) {
     if let message = validate(viewModel: viewModel) {
-      alertView?.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
+      alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
     } else {
-      loadingView?.display(viewModel: LoadingViewModel(isLoading: true))
+      loadingView.display(viewModel: LoadingViewModel(isLoading: true))
       addAccount.add(addAccountModel: SignUpMapper.toAddAccountModel(viewModel: viewModel)) { [weak self] result in
         guard let self = self else { return }
         switch result {
-        case .failure: self.alertView?.showMessage(viewModel: AlertViewModel(title: "Error", message: "Something went wrong, try again later."))
-        case .success: self.alertView?.showMessage(viewModel: AlertViewModel(title: "Success", message: "Account created."))
+        case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Something went wrong, try again later."))
+        case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Account created."))
         }
-        self.loadingView?.display(viewModel: LoadingViewModel(isLoading: false))
+        self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
       }
     }
   }
