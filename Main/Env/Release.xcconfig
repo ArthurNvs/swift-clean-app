@@ -1,0 +1,4 @@
+//  Created by Arthur Neves on 17/03/22.
+
+// Here must be prod values
+API_BASE_URL = http:/$()/localhost:5050/api
