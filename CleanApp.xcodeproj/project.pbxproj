@@ -87,6 +87,7 @@
 		E7C64A9227E350DF00333753 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C05EFB27C6A87700891876 /* TestExtensions.swift */; };
 		E7C64A9527E4073E00333753 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A9427E4073E00333753 /* WeakVarProxy.swift */; };
 		E7C64A9A27E40C5800333753 /* EnvironmentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A9927E40C5800333753 /* EnvironmentHelper.swift */; };
+		E7C64A9C27E6146300333753 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712228827D778E800F7F1B8 /* TestFactories.swift */; };
 		E7C69D5127E012F700A3ED94 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C69D5027E012F700A3ED94 /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -1657,6 +1658,7 @@
 			files = (
 				E7C64A9127E3509900333753 /* AddAccountSpy.swift in Sources */,
 				E7C64A9227E350DF00333753 /* TestExtensions.swift in Sources */,
+				E7C64A9C27E6146300333753 /* TestFactories.swift in Sources */,
 				E7C64A9027E34FB700333753 /* SignUpComposerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
