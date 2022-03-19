@@ -19,27 +19,3 @@ final class UseCaseFactory {
     return MainQueueDispatchDecorator(remoteAddAccount)
   }
 }
-
-// Implementing a decorator
-public final class MainQueueDispatchDecorator<T> {
-  private let instance: T
-  
-  public init(_ instance: T) {
-    self.instance = instance
-  }
-  
-  func dispatch(completion: @escaping () -> Void) {
-    // ensure decorator execute in Main Thread only if its not in Main Thread
-    guard Thread.isMainThread else { return DispatchQueue.main.async(execute: completion) }
-    completion()
-  }
-}
-
-extension MainQueueDispatchDecorator: AddAccount where T: AddAccount {
-  public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
-    instance.add(addAccountModel: addAccountModel) { [weak self] result in
-      // ensure the useCase is executed in Main Thread
-      self?.dispatch { completion(result) }
-    }
-  }
-}
