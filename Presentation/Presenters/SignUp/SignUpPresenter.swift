@@ -5,20 +5,20 @@ import Domain
 
 public class SignUpPresenter {
   private let alertView: AlertView
-  private let emailValidator: EmailValidator
   private let addAccount: AddAccount
   private let loadingView: LoadingView
+  private let validation: Validation
   
-  public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
+  public init(alertView: AlertView, addAccount: AddAccount, loadingView: LoadingView, validation: Validation) {
     self.alertView = alertView
-    self.emailValidator = emailValidator
     self.addAccount = addAccount
     self.loadingView = loadingView
+    self.validation = validation
   }
   
   // Presenter sends to AlertView the message (after logics)
   public func signUp(viewModel: SignUpViewModel) {
-    if let message = validate(viewModel: viewModel) {
+    if let message = validation.validate(data: viewModel.toJson()) {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
     } else {
       loadingView.display(viewModel: LoadingViewModel(isLoading: true))
@@ -33,20 +33,20 @@ public class SignUpPresenter {
     }
   }
   
-  private func validate(viewModel: SignUpViewModel) -> String? {
-    if viewModel.name == nil || viewModel.name!.isEmpty {
-      return "Name is required"
-    } else if viewModel.email == nil || viewModel.email!.isEmpty {
-      return "Email is required"
-    } else if viewModel.password == nil || viewModel.password!.isEmpty {
-      return "Password is required"
-    } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-      return "Password confirmation is required"
-    } else if viewModel.password != viewModel.passwordConfirmation {
-      return "Password is not valid"
-    } else if !emailValidator.isValid(email: viewModel.email!) {
-      return "Email is not valid"
-    }
-    return nil
-  }
+//  private func validate(viewModel: SignUpViewModel) -> String? {
+//    if viewModel.name == nil || viewModel.name!.isEmpty {
+//      return "Name is required"
+//    } else if viewModel.email == nil || viewModel.email!.isEmpty {
+//      return "Email is required"
+//    } else if viewModel.password == nil || viewModel.password!.isEmpty {
+//      return "Password is required"
+//    } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
+//      return "Password confirmation is required"
+//    } else if viewModel.password != viewModel.passwordConfirmation {
+//      return "Password is not valid"
+//    } else if !emailValidator.isValid(email: viewModel.email!) {
+//      return "Email is not valid"
+//    }
+//    return nil
+//  }
 }

@@ -1,7 +1,7 @@
 //  Created by Arthur Neves on 08/03/22.
 
 import Foundation
-import Presentation
+import Validation
 
 class EmailValidatorSpy: EmailValidator {
   var isValid = true
