@@ -1,6 +1,7 @@
 //  Created by Arthur Neves on 16/03/22.
 
 import UIKit
+import UI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
@@ -12,7 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(windowScene: windowScene)
     let httpClient = makeAlamofireAdapter()
     let addAccount = makeRemoteAddAccount(httpClient: httpClient)
-    window?.rootViewController = makeSignUpController(addAccount: addAccount)
+    let signUpController = makeSignUpController(addAccount: addAccount)
+    let nav = NavigationController(rootViewController: signUpController)
+    window?.rootViewController = nav
     window?.makeKeyAndVisible()
   }
 }
