@@ -20,7 +20,8 @@ public final class SignUpViewController: UIViewController, Storyboarded {
   }
   
   private func configure() {
-    saveButton?.layer.cornerRadius = 50
+    title = "4Dev"
+    saveButton?.layer.cornerRadius = 2
     saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     hideKeyboardOnTap()
   }

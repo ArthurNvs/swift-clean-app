@@ -107,6 +107,11 @@
 		E7DA8D5227E8B9C6002BCFE7 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D5127E8B9C6002BCFE7 /* ApiUrlFactory.swift */; };
 		E7DA8D5527E8BB1C002BCFE7 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D5427E8BB1C002BCFE7 /* AlamofireAdapterFactory.swift */; };
 		E7DA8D5927E8C383002BCFE7 /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D5827E8C383002BCFE7 /* EmailValidatorAdapterFactory.swift */; };
+		E7DA8D5C27E8C5CE002BCFE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DA8D5B27E8C5CE002BCFE7 /* Images.xcassets */; };
+		E7DA8D5E27E8E7FC002BCFE7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D5D27E8E7FC002BCFE7 /* UIColorExtensions.swift */; };
+		E7DA8D6027E8E8DE002BCFE7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D5F27E8E8DE002BCFE7 /* Color.swift */; };
+		E7DA8D6327E8EA4C002BCFE7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6227E8EA4C002BCFE7 /* RoundedTextField.swift */; };
+		E7DA8D6527E8EC1D002BCFE7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6427E8EC1D002BCFE7 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,6 +425,11 @@
 		E7DA8D5127E8B9C6002BCFE7 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		E7DA8D5427E8BB1C002BCFE7 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		E7DA8D5827E8C383002BCFE7 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
+		E7DA8D5B27E8C5CE002BCFE7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E7DA8D5D27E8E7FC002BCFE7 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		E7DA8D5F27E8E8DE002BCFE7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E7DA8D6227E8EA4C002BCFE7 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		E7DA8D6427E8EC1D002BCFE7 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -700,7 +710,9 @@
 		E7A3456827D82E73001DB681 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E7DA8D5A27E8C5BA002BCFE7 /* Resources */,
 				E7B472E527E0204D00B01C85 /* Helpers */,
+				E7DA8D6127E8EA2E002BCFE7 /* Components */,
 				E7C69D4D27E0129900A3ED94 /* Scenes */,
 			);
 			path = UI;
@@ -897,6 +909,8 @@
 			children = (
 				E7B472E627E0206B00B01C85 /* UIViewControllerExtensions.swift */,
 				E7B472E827E0217400B01C85 /* Storyboarded.swift */,
+				E7DA8D5D27E8E7FC002BCFE7 /* UIColorExtensions.swift */,
+				E7DA8D5F27E8E8DE002BCFE7 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1088,6 +1102,23 @@
 				E7C64A8D27E34C3A00333753 /* SignUpControllerFactory.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E7DA8D5A27E8C5BA002BCFE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7DA8D5B27E8C5CE002BCFE7 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7DA8D6127E8EA2E002BCFE7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E7DA8D6227E8EA4C002BCFE7 /* RoundedTextField.swift */,
+				E7DA8D6427E8EC1D002BCFE7 /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1537,6 +1568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A3456C27D82F5C001DB681 /* SignUp.storyboard in Resources */,
+				E7DA8D5C27E8C5CE002BCFE7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,8 +1680,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7B472E727E0206B00B01C85 /* UIViewControllerExtensions.swift in Sources */,
+				E7DA8D6327E8EA4C002BCFE7 /* RoundedTextField.swift in Sources */,
 				E7A3456A27D82F2A001DB681 /* SignUpViewController.swift in Sources */,
 				E7B472E927E0217400B01C85 /* Storyboarded.swift in Sources */,
+				E7DA8D6027E8E8DE002BCFE7 /* Color.swift in Sources */,
+				E7DA8D6527E8EC1D002BCFE7 /* NavigationController.swift in Sources */,
+				E7DA8D5E27E8E7FC002BCFE7 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
