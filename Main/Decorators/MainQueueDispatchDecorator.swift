@@ -19,7 +19,7 @@ public final class MainQueueDispatchDecorator<T> {
 }
 
 extension MainQueueDispatchDecorator: AddAccount where T: AddAccount {
-  public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+  public func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.Result) -> Void) {
     instance.add(addAccountModel: addAccountModel) { [weak self] result in
       // ensure the useCase is executed in Main Thread
       self?.dispatch { completion(result) }
