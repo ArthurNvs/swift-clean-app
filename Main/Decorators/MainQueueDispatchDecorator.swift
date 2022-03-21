@@ -3,7 +3,6 @@
 import Foundation
 import Domain
 
-// Implementing a decorator
 public final class MainQueueDispatchDecorator<T> {
   private let instance: T
   
