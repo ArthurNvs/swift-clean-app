@@ -37,7 +37,7 @@
 		<key>Presentation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>9</integer>
 		</dict>
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
@@ -63,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>E7A528B427D16C88006DA170</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7A528C727D2279B006DA170</key>
 		<dict>
 			<key>primary</key>
 			<true/>
