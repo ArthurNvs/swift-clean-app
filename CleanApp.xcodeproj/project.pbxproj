@@ -112,6 +112,7 @@
 		E7DA8D6027E8E8DE002BCFE7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D5F27E8E8DE002BCFE7 /* Color.swift */; };
 		E7DA8D6327E8EA4C002BCFE7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6227E8EA4C002BCFE7 /* RoundedTextField.swift */; };
 		E7DA8D6527E8EC1D002BCFE7 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6427E8EC1D002BCFE7 /* NavigationController.swift */; };
+		E7DA8D6727E9E8E7002BCFE7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6627E9E8E7002BCFE7 /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -430,6 +431,7 @@
 		E7DA8D5F27E8E8DE002BCFE7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E7DA8D6227E8EA4C002BCFE7 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		E7DA8D6427E8EC1D002BCFE7 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		E7DA8D6627E9E8E7002BCFE7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -850,6 +852,7 @@
 			isa = PBXGroup;
 			children = (
 				E7AEE80B27C27300005FBF16 /* AddAccount.swift */,
+				E7DA8D6627E9E8E7002BCFE7 /* Authentication.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1740,6 +1743,7 @@
 				E7AEE83027C2B8BB005FBF16 /* Model.swift in Sources */,
 				E7AEE80C27C27300005FBF16 /* AddAccount.swift in Sources */,
 				E7AEE83D27C2D412005FBF16 /* DomainError.swift in Sources */,
+				E7DA8D6727E9E8E7002BCFE7 /* Authentication.swift in Sources */,
 				E7AEE80E27C2749D005FBF16 /* AccountModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
