@@ -10,3 +10,7 @@ func makeAccountModel() -> AccountModel {
 func makeAddAccountModel() -> AddAccountModel {
   AddAccountModel(name: "any_name", email: "any_email@mail.com", password: "any_pswd", passwordConfirmation: "any_pswd")
 }
+
+func makeAuthenticationModel() -> AuthenticationModel {
+  AuthenticationModel(email: "any_email@mail.com", password: "any_pswd")
+}
