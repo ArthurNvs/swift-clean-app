@@ -22,18 +22,25 @@ class RemoteAuthenticationTests: XCTestCase {
   
   func test_auth_should_complete_with_error_if_client_completes_with_error() {
     let (sut, httpClientSpy) = makeSut()
-    expect(sut,completeWith: .failure(.unexpected), when: {
+    expect(sut, completeWith: .failure(.unexpected), when: {
       httpClientSpy.completeWithError(.noConnectivity)
     })
   }
   
   func test_auth_should_complete_with_expired_session_if_client_completes_with_unauthorized() {
     let (sut, httpClientSpy) = makeSut()
-    expect(sut,completeWith: .failure(.expiredSession), when: {
+    expect(sut, completeWith: .failure(.expiredSession), when: {
       httpClientSpy.completeWithError(.unauthorized)
     })
   }
   
+  func test_auth_should_complete_with_account_with_data() {
+    let (sut, httpClientSpy) = makeSut()
+    let account = makeAccountModel()
+    expect(sut, completeWith: .success(account), when: {
+      httpClientSpy.completeWithData(account.toData()!)
+    })
+  }
 }
 
 extension RemoteAuthenticationTests {
