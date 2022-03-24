@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SignUp-->
+        <!--Login-->
         <scene sceneID="k4n-4X-FGO">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="2ig-O0-Ajy" userLabel="SignUp" customClass="SignUpViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="2ig-O0-Ajy" userLabel="Login" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gHn-kl-0aQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,91 +34,62 @@
                                     <constraint firstItem="1Yb-qZ-drB" firstAttribute="top" secondItem="m4U-4r-oIh" secondAttribute="top" constant="56" id="zMa-5J-zZ9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CADASTRO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F06-Lh-KRE" userLabel="Title">
-                                <rect key="frame" x="152.5" y="270" width="109" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F06-Lh-KRE" userLabel="Title">
+                                <rect key="frame" x="176.5" y="270" width="61" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.29738145896721069" green="0.49353175784195646" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6i0-uV-W7B" userLabel="NameTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                <rect key="frame" x="32" y="310" width="350" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="gU2-9u-wQy"/>
-                                </constraints>
-                                <color key="textColor" systemColor="tintColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IyQ-Zy-5W6" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                <rect key="frame" x="32" y="366" width="350" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IyQ-Zy-5W6" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                                <rect key="frame" x="32" y="310" width="350" height="34"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-IM-NlZ" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                <rect key="frame" x="32" y="422" width="350" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-IM-NlZ" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                                <rect key="frame" x="32" y="360" width="350" height="34"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="McW-aw-vsu" userLabel="PasswordConfirmationTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                <rect key="frame" x="32" y="478" width="350" height="40"/>
-                                <color key="textColor" systemColor="tintColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-hg-WHW">
-                                <rect key="frame" x="32" y="550" width="350" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-hg-WHW" userLabel="SignIn Button">
+                                <rect key="frame" x="32" y="426" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.29738145900000001" green="0.49353175780000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="P9F-e1-vhp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="CRIAR CONTA">
+                                <buttonConfiguration key="configuration" style="plain" title="SIGN IN">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3rb-GX-1nD">
-                                <rect key="frame" x="188.5" y="626" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="502" width="37" height="37"/>
                                 <color key="color" systemColor="tintColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="egh-Cj-K2j"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IyQ-Zy-5W6" firstAttribute="top" secondItem="6i0-uV-W7B" secondAttribute="bottom" constant="16" id="425-Qm-ydZ"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="top" secondItem="IyQ-Zy-5W6" secondAttribute="bottom" constant="16" id="507-cO-Vcu"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="leading" secondItem="IyQ-Zy-5W6" secondAttribute="leading" id="6bN-il-qvd"/>
                             <constraint firstItem="3rb-GX-1nD" firstAttribute="centerX" secondItem="egh-Cj-K2j" secondAttribute="centerX" id="9rM-Ki-Gh6"/>
                             <constraint firstItem="F06-Lh-KRE" firstAttribute="centerX" secondItem="egh-Cj-K2j" secondAttribute="centerX" id="Blb-xT-ABU"/>
-                            <constraint firstItem="McW-aw-vsu" firstAttribute="top" secondItem="ZsS-IM-NlZ" secondAttribute="bottom" constant="16" id="Es7-M5-g9K"/>
                             <constraint firstItem="egh-Cj-K2j" firstAttribute="trailing" secondItem="m4U-4r-oIh" secondAttribute="trailing" id="J38-7p-fmi"/>
-                            <constraint firstItem="egh-Cj-K2j" firstAttribute="trailing" secondItem="6i0-uV-W7B" secondAttribute="trailing" constant="32" id="LBw-Ux-coE"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="height" secondItem="IyQ-Zy-5W6" secondAttribute="height" id="M87-JE-RJv"/>
-                            <constraint firstItem="McW-aw-vsu" firstAttribute="leading" secondItem="ZsS-IM-NlZ" secondAttribute="leading" id="Ob1-XZ-c1G"/>
                             <constraint firstItem="3rb-GX-1nD" firstAttribute="top" secondItem="LhU-hg-WHW" secondAttribute="bottom" constant="16" id="PNM-y1-f3C"/>
-                            <constraint firstItem="LhU-hg-WHW" firstAttribute="trailing" secondItem="McW-aw-vsu" secondAttribute="trailing" id="U2t-N8-LOl"/>
-                            <constraint firstItem="6i0-uV-W7B" firstAttribute="leading" secondItem="egh-Cj-K2j" secondAttribute="leading" constant="32" id="VBQ-wQ-Pjg"/>
-                            <constraint firstItem="LhU-hg-WHW" firstAttribute="top" secondItem="McW-aw-vsu" secondAttribute="bottom" constant="32" id="YM1-Hh-pZQ"/>
+                            <constraint firstItem="LhU-hg-WHW" firstAttribute="top" secondItem="ZsS-IM-NlZ" secondAttribute="bottom" constant="32" id="RGx-XB-BHQ"/>
                             <constraint firstItem="F06-Lh-KRE" firstAttribute="top" secondItem="m4U-4r-oIh" secondAttribute="bottom" constant="24" id="YT1-TT-Qnx"/>
-                            <constraint firstItem="IyQ-Zy-5W6" firstAttribute="height" secondItem="6i0-uV-W7B" secondAttribute="height" id="Yvj-sf-XfI"/>
-                            <constraint firstItem="McW-aw-vsu" firstAttribute="height" secondItem="ZsS-IM-NlZ" secondAttribute="height" id="afF-MC-mxn"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="trailing" secondItem="IyQ-Zy-5W6" secondAttribute="trailing" id="dVE-lz-k0j"/>
-                            <constraint firstItem="6i0-uV-W7B" firstAttribute="top" secondItem="F06-Lh-KRE" secondAttribute="bottom" constant="16" id="e6E-Lf-dHA"/>
                             <constraint firstItem="m4U-4r-oIh" firstAttribute="leading" secondItem="egh-Cj-K2j" secondAttribute="leading" id="ggX-D1-V4i"/>
-                            <constraint firstItem="IyQ-Zy-5W6" firstAttribute="trailing" secondItem="6i0-uV-W7B" secondAttribute="trailing" id="jH6-LE-gmR"/>
-                            <constraint firstItem="IyQ-Zy-5W6" firstAttribute="leading" secondItem="6i0-uV-W7B" secondAttribute="leading" id="kFn-se-ebD"/>
-                            <constraint firstItem="LhU-hg-WHW" firstAttribute="leading" secondItem="McW-aw-vsu" secondAttribute="leading" id="kdg-sG-dHB"/>
                             <constraint firstItem="m4U-4r-oIh" firstAttribute="top" secondItem="egh-Cj-K2j" secondAttribute="top" id="mdk-q6-eCy"/>
-                            <constraint firstItem="McW-aw-vsu" firstAttribute="trailing" secondItem="ZsS-IM-NlZ" secondAttribute="trailing" id="ss1-6k-fEI"/>
+                            <constraint firstItem="IyQ-Zy-5W6" firstAttribute="top" secondItem="F06-Lh-KRE" secondAttribute="bottom" constant="16" id="s4f-vy-TnI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="IyQ-Zy-5W6" id="Xbf-89-WA8"/>
                         <outlet property="loadingIndicator" destination="3rb-GX-1nD" id="ljO-Qg-FwN"/>
-                        <outlet property="nameTextField" destination="6i0-uV-W7B" id="XKZ-do-0up"/>
-                        <outlet property="passwordConfirmationTextField" destination="McW-aw-vsu" id="F0N-ab-IQa"/>
                         <outlet property="passwordTextField" destination="ZsS-IM-NlZ" id="N76-0b-2NR"/>
                         <outlet property="saveButton" destination="LhU-hg-WHW" id="LXJ-aS-uvT"/>
                     </connections>

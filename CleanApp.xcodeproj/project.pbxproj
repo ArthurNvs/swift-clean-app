@@ -119,6 +119,7 @@
 		E7DD90AF27EBEAE6000A3752 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */; };
 		E7DD90B227EBEB64000A3752 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */; };
 		E7DD90B427EBF11C000A3752 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90B327EBF11C000A3752 /* AuthenticationSpy.swift */; };
+		E7DD90BB27EBFC74000A3752 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DD90BA27EBFC74000A3752 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -444,6 +445,7 @@
 		E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		E7DD90B327EBF11C000A3752 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
+		E7DD90BA27EBFC74000A3752 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1077,6 +1079,7 @@
 		E7C69D4D27E0129900A3ED94 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E7DD90B527EBFC32000A3752 /* Login */,
 				E7C69D4B27E0125700A3ED94 /* SignUp */,
 			);
 			path = Scenes;
@@ -1154,6 +1157,14 @@
 			children = (
 				E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */,
 				E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E7DD90B527EBFC32000A3752 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E7DD90BA27EBFC74000A3752 /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1606,6 +1617,7 @@
 			files = (
 				E7A3456C27D82F5C001DB681 /* SignUp.storyboard in Resources */,
 				E7DA8D5C27E8C5CE002BCFE7 /* Images.xcassets in Resources */,
+				E7DD90BB27EBFC74000A3752 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
