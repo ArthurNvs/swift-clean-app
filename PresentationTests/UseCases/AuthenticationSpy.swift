@@ -11,4 +11,8 @@ class AuthenticationSpy: Authentication {
     self.authenticationModel = authenticationModel
     self.completion = completion
   }
+  
+  func completeWithError(_ error: DomainError) {
+    completion?(.failure(error))
+  }
 }
