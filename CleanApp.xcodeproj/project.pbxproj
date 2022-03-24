@@ -118,6 +118,7 @@
 		E7DD90AB27EBE988000A3752 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90AA27EBE988000A3752 /* LoginPresenterTests.swift */; };
 		E7DD90AF27EBEAE6000A3752 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */; };
 		E7DD90B227EBEB64000A3752 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */; };
+		E7DD90B427EBF11C000A3752 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90B327EBF11C000A3752 /* AuthenticationSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +443,7 @@
 		E7DD90AA27EBE988000A3752 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		E7DD90B327EBF11C000A3752 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -645,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				E712228327D777E500F7F1B8 /* AddAccountSpy.swift */,
+				E7DD90B327EBF11C000A3752 /* AuthenticationSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1761,6 +1764,7 @@
 				E712228627D7784000F7F1B8 /* LoadingViewSpy.swift in Sources */,
 				E7DD90AB27EBE988000A3752 /* LoginPresenterTests.swift in Sources */,
 				E712228427D777E500F7F1B8 /* AddAccountSpy.swift in Sources */,
+				E7DD90B427EBF11C000A3752 /* AuthenticationSpy.swift in Sources */,
 				E712227E27D7772500F7F1B8 /* AlertViewSpy.swift in Sources */,
 				E712227227D418FC00F7F1B8 /* AccountModelFactory.swift in Sources */,
 				E712227327D4E71600F7F1B8 /* TestExtensions.swift in Sources */,
