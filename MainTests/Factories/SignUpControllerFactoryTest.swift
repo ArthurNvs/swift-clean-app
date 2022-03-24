@@ -5,7 +5,7 @@ import Main
 import UI
 import Validation
 
-class SignUpFactoryTest: XCTestCase {
+class SignUpControllerFactoryTest: XCTestCase {
   func test_background_request_should_complete_on_main_thread() {
     let (sut, addAccountSpy) = makeSut()
     sut.loadViewIfNeeded()
@@ -29,7 +29,7 @@ class SignUpFactoryTest: XCTestCase {
   }
 }
 
-extension SignUpFactoryTest {
+extension SignUpControllerFactoryTest {
   func makeSut(file: StaticString = #filePath, line: UInt = #line) -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy) {
     let addAccountSpy = AddAccountSpy()
     let sut = makeSignUpController(addAccount: addAccountSpy)
