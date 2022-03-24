@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit
+import XCTest
 
 extension UIControl{
   func simulate(event: UIControl.Event) {
@@ -14,5 +15,13 @@ extension UIControl{
   
   func simulateTap() {
     simulate(event: .touchUpInside)
+  }
+}
+
+extension XCTestCase {
+  func checkMemoryLeak(for instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
+    addTeardownBlock { [weak instance] in
+      XCTAssertNil(instance, file: file, line: line)
+    }
   }
 }

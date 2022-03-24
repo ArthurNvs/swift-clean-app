@@ -4,7 +4,6 @@ import XCTest
 import UIKit
 import Presentation
 @testable import UI
-import SwiftUI
 
 class SignUpViewControllerTests: XCTestCase {
   func test_loading_is_hidden_on_start() {
@@ -36,6 +35,7 @@ extension SignUpViewControllerTests {
     let sut = SignUpViewController.instantiate()
     sut.signUp = signUpSpy
     sut.loadViewIfNeeded()
+    checkMemoryLeak(for: sut)
     return sut
   }
 }

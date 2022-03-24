@@ -40,19 +40,19 @@
                                 <color key="textColor" red="0.29738145896721069" green="0.49353175784195646" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IyQ-Zy-5W6" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IyQ-Zy-5W6" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="32" y="310" width="350" height="34"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-IM-NlZ" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-IM-NlZ" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="32" y="360" width="350" height="34"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-hg-WHW" userLabel="SignIn Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-hg-WHW" userLabel="SignIn Button">
                                 <rect key="frame" x="32" y="426" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.29738145900000001" green="0.49353175780000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -72,24 +72,30 @@
                         <viewLayoutGuide key="safeArea" id="egh-Cj-K2j"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LhU-hg-WHW" firstAttribute="trailing" secondItem="IyQ-Zy-5W6" secondAttribute="trailing" id="4U4-Id-O6Q"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="top" secondItem="IyQ-Zy-5W6" secondAttribute="bottom" constant="16" id="507-cO-Vcu"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="leading" secondItem="IyQ-Zy-5W6" secondAttribute="leading" id="6bN-il-qvd"/>
+                            <constraint firstItem="LhU-hg-WHW" firstAttribute="leading" secondItem="IyQ-Zy-5W6" secondAttribute="leading" id="9ps-Vp-Fla"/>
                             <constraint firstItem="3rb-GX-1nD" firstAttribute="centerX" secondItem="egh-Cj-K2j" secondAttribute="centerX" id="9rM-Ki-Gh6"/>
                             <constraint firstItem="F06-Lh-KRE" firstAttribute="centerX" secondItem="egh-Cj-K2j" secondAttribute="centerX" id="Blb-xT-ABU"/>
                             <constraint firstItem="egh-Cj-K2j" firstAttribute="trailing" secondItem="m4U-4r-oIh" secondAttribute="trailing" id="J38-7p-fmi"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="height" secondItem="IyQ-Zy-5W6" secondAttribute="height" id="M87-JE-RJv"/>
                             <constraint firstItem="3rb-GX-1nD" firstAttribute="top" secondItem="LhU-hg-WHW" secondAttribute="bottom" constant="16" id="PNM-y1-f3C"/>
                             <constraint firstItem="LhU-hg-WHW" firstAttribute="top" secondItem="ZsS-IM-NlZ" secondAttribute="bottom" constant="32" id="RGx-XB-BHQ"/>
+                            <constraint firstItem="IyQ-Zy-5W6" firstAttribute="leading" secondItem="egh-Cj-K2j" secondAttribute="leading" constant="32" id="TsS-Ex-kLv"/>
                             <constraint firstItem="F06-Lh-KRE" firstAttribute="top" secondItem="m4U-4r-oIh" secondAttribute="bottom" constant="24" id="YT1-TT-Qnx"/>
                             <constraint firstItem="ZsS-IM-NlZ" firstAttribute="trailing" secondItem="IyQ-Zy-5W6" secondAttribute="trailing" id="dVE-lz-k0j"/>
                             <constraint firstItem="m4U-4r-oIh" firstAttribute="leading" secondItem="egh-Cj-K2j" secondAttribute="leading" id="ggX-D1-V4i"/>
                             <constraint firstItem="m4U-4r-oIh" firstAttribute="top" secondItem="egh-Cj-K2j" secondAttribute="top" id="mdk-q6-eCy"/>
                             <constraint firstItem="IyQ-Zy-5W6" firstAttribute="top" secondItem="F06-Lh-KRE" secondAttribute="bottom" constant="16" id="s4f-vy-TnI"/>
+                            <constraint firstItem="egh-Cj-K2j" firstAttribute="trailing" secondItem="IyQ-Zy-5W6" secondAttribute="trailing" constant="32" id="tWg-Th-dHR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="IyQ-Zy-5W6" id="Dz5-AI-7JA"/>
                         <outlet property="loadingIndicator" destination="3rb-GX-1nD" id="RqG-h0-cVh"/>
                         <outlet property="loginButton" destination="LhU-hg-WHW" id="pMq-IY-gbB"/>
+                        <outlet property="passwordTextField" destination="ZsS-IM-NlZ" id="byN-S6-Doy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDP-Ej-TSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
