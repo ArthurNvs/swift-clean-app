@@ -115,6 +115,9 @@
 		E7DA8D6727E9E8E7002BCFE7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6627E9E8E7002BCFE7 /* Authentication.swift */; };
 		E7DA8D6927E9EA1A002BCFE7 /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6827E9EA1A002BCFE7 /* RemoteAuthenticationTests.swift */; };
 		E7DA8D6B27E9EB29002BCFE7 /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D6A27E9EB29002BCFE7 /* RemoteAuthentication.swift */; };
+		E7DD90AB27EBE988000A3752 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90AA27EBE988000A3752 /* LoginPresenterTests.swift */; };
+		E7DD90AF27EBEAE6000A3752 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */; };
+		E7DD90B227EBEB64000A3752 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,6 +439,9 @@
 		E7DA8D6627E9E8E7002BCFE7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E7DA8D6827E9EA1A002BCFE7 /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		E7DA8D6A27E9EB29002BCFE7 /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
+		E7DD90AA27EBE988000A3752 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +584,7 @@
 		E712226D27D3FF2700F7F1B8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				E7DD90B027EBEAED000A3752 /* Login */,
 				E712227627D770E800F7F1B8 /* SignUp */,
 			);
 			path = Presenters;
@@ -586,6 +593,7 @@
 		E712226E27D4020E00F7F1B8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				E7DD90A927EBE947000A3752 /* Login */,
 				E712227B27D776AD00F7F1B8 /* SignUp */,
 			);
 			path = Presenters;
@@ -1128,6 +1136,23 @@
 				E7DA8D6427E8EC1D002BCFE7 /* NavigationController.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		E7DD90A927EBE947000A3752 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E7DD90AA27EBE988000A3752 /* LoginPresenterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E7DD90B027EBEAED000A3752 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E7DD90B127EBEB64000A3752 /* LoginPresenter.swift */,
+				E7DD90AE27EBEAE6000A3752 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1721,6 +1746,8 @@
 			files = (
 				E712226427D3FE5C00F7F1B8 /* SignUpPresenter.swift in Sources */,
 				E712227527D5673300F7F1B8 /* LoadingView.swift in Sources */,
+				E7DD90B227EBEB64000A3752 /* LoginPresenter.swift in Sources */,
+				E7DD90AF27EBEAE6000A3752 /* LoginViewModel.swift in Sources */,
 				E712227827D770FB00F7F1B8 /* SignUpViewModel.swift in Sources */,
 				E712226C27D3FF1200F7F1B8 /* AlertView.swift in Sources */,
 				E71E021927E697F300A0AEBE /* Validation.swift in Sources */,
@@ -1732,6 +1759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E712228627D7784000F7F1B8 /* LoadingViewSpy.swift in Sources */,
+				E7DD90AB27EBE988000A3752 /* LoginPresenterTests.swift in Sources */,
 				E712228427D777E500F7F1B8 /* AddAccountSpy.swift in Sources */,
 				E712227E27D7772500F7F1B8 /* AlertViewSpy.swift in Sources */,
 				E712227227D418FC00F7F1B8 /* AccountModelFactory.swift in Sources */,
