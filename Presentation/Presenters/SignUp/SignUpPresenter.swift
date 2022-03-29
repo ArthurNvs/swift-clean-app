@@ -17,7 +17,7 @@ public class SignUpPresenter {
   }
   
   // Presenter sends to AlertView the message (after logics)
-  public func signUp(viewModel: SignUpViewModel) {
+  public func signUp(viewModel: SignUpRequest) {
     if let message = validation.validate(data: viewModel.toJson()) {
       alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
     } else {
