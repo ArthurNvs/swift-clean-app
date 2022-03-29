@@ -32,6 +32,6 @@ extension LoginControllerFactoryTest {
     let sut = makeLoginController(authentication: MainQueueDispatchDecorator(authenticationSpy))
     checkMemoryLeak(for: sut, file: file, line: line)
     checkMemoryLeak(for: authenticationSpy, file: file, line: line)
-    return (sut, authenticationSpy)
+    return (sut, authenticationSpy) 
   }
 }

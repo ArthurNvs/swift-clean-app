@@ -11,7 +11,6 @@ public final class MainQueueDispatchDecorator<T> {
   }
   
   func dispatch(completion: @escaping () -> Void) {
-    // ensure decorator execute in Main Thread only if its not in Main Thread
     guard Thread.isMainThread else { return DispatchQueue.main.async(execute: completion) }
     completion()
   }
