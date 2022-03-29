@@ -11,7 +11,7 @@
         <!--Welcome-->
         <scene sceneID="k4n-4X-FGO">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="2ig-O0-Ajy" userLabel="Welcome" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="2ig-O0-Ajy" userLabel="Welcome" customClass="WelcomeViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gHn-kl-0aQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-hg-WHW" userLabel="Login Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-hg-WHW" userLabel="LOGIN">
                                 <rect key="frame" x="32" y="360.5" width="350" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -54,7 +54,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-vO-CIl" userLabel="SignUp Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-vO-CIl" userLabel="SIGNUP">
                                 <rect key="frame" x="32" y="488" width="350" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -94,7 +94,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="LhU-hg-WHW" id="pMq-IY-gbB"/>
+                        <outlet property="loginButton" destination="LhU-hg-WHW" id="APb-AE-hSM"/>
+                        <outlet property="signUpButton" destination="RgH-vO-CIl" id="Cpx-7z-UcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDP-Ej-TSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
