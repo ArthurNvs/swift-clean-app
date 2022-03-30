@@ -7,7 +7,7 @@ public final class WelcomeRouter {
   private let loginFactory: () -> LoginViewController
   private let signUpFactory: () -> SignUpViewController
   
-  init(nav: NavigationController,
+  public init(nav: NavigationController,
        loginFactory: @escaping () -> LoginViewController,
        signUpFactory: @escaping () -> SignUpViewController) {
     self.nav = nav
