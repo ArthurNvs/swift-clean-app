@@ -46,6 +46,7 @@
 		E7A528B927D16C88006DA170 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AEE81427C27532005FBF16 /* Data.framework */; };
 		E7A528D027D2279B006DA170 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A528C827D2279B006DA170 /* Presentation.framework */; };
 		E7A528D527D2279B006DA170 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A528D427D2279B006DA170 /* SignUpPresenterTests.swift */; };
+		E7AB363127F3247600CD750E /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB363027F3247600CD750E /* WelcomeRouterTests.swift */; };
 		E7AEE80C27C27300005FBF16 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEE80B27C27300005FBF16 /* AddAccount.swift */; };
 		E7AEE80E27C2749D005FBF16 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEE80D27C2749D005FBF16 /* AccountModel.swift */; };
 		E7AEE81C27C27532005FBF16 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AEE81427C27532005FBF16 /* Data.framework */; };
@@ -394,6 +395,7 @@
 		E7A528C827D2279B006DA170 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A528CF27D2279B006DA170 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A528D427D2279B006DA170 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
+		E7AB363027F3247600CD750E /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		E7AEE80427C27226005FBF16 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AEE80B27C27300005FBF16 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		E7AEE80D27C2749D005FBF16 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -985,6 +987,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B9462C27F3177C00F37A72 /* WelcomeViewControllerTests.swift */,
+				E7AB363027F3247600CD750E /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1794,6 +1797,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AB363127F3247600CD750E /* WelcomeRouterTests.swift in Sources */,
 				E7DD90BE27EC868A000A3752 /* LoginViewControllerTests.swift in Sources */,
 				E712229C27D77BD600F7F1B8 /* SignUpViewControllerTests.swift in Sources */,
 				E7B9462D27F3177C00F37A72 /* WelcomeViewControllerTests.swift in Sources */,
