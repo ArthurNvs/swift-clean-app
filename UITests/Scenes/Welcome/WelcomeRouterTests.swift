@@ -3,7 +3,6 @@
 import XCTest
 import UIKit
 import UI
-@testable import MainTests
 
 public final class WelcomeRouter {
   private let nav: NavigationController
@@ -21,14 +20,23 @@ public final class WelcomeRouter {
 
 class WelcomeRouterTests: XCTestCase {
   func test_goToLogin_calls_nav_with_correct_view_controller() {
-    let loginFactorySpy = LoginFactorySpy()
-    let nav = NavigationController()
-    let sut = WelcomeRouter(nav: nav, loginFactory: loginFactorySpy.makeLoginViewController)
+    let (sut, nav) = makeSut()
     sut.goToLogin()
     XCTAssertEqual(nav.viewControllers.count, 1)
     XCTAssertTrue(nav.viewControllers[0] is LoginViewController)
   }
-  
+}
+
+extension WelcomeRouterTests {
+  func makeSut() -> (sut: WelcomeRouter, nav: NavigationController) {
+    let loginFactorySpy = LoginFactorySpy()
+    let nav = NavigationController()
+    let sut = WelcomeRouter(nav: nav, loginFactory: loginFactorySpy.makeLoginViewController)
+    return (sut, nav)
+  }
+}
+
+extension WelcomeRouterTests {
   class LoginFactorySpy {
     func makeLoginViewController() -> LoginViewController {
       return LoginViewController.instantiate()
