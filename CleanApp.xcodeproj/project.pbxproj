@@ -109,6 +109,7 @@
 		E7C64A9F27E6202500333753 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C64A9E27E6202400333753 /* MainQueueDispatchDecorator.swift */; };
 		E7C69D5127E012F700A3ED94 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C69D5027E012F700A3ED94 /* TestExtensions.swift */; };
 		E7CD0EC927F5250E00EF0B15 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CD0EC827F5250E00EF0B15 /* WelcomeRouter.swift */; };
+		E7CD0ECB27F535F900EF0B15 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CD0ECA27F535F900EF0B15 /* WelcomeControllerFactory.swift */; };
 		E7DA8D4A27E75458002BCFE7 /* ValidationCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D4927E75458002BCFE7 /* ValidationCompositeTests.swift */; };
 		E7DA8D4C27E75D04002BCFE7 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D4B27E75D04002BCFE7 /* ValidationComposite.swift */; };
 		E7DA8D4F27E75D62002BCFE7 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA8D4E27E75D62002BCFE7 /* ValidationSpy.swift */; };
@@ -446,6 +447,7 @@
 		E7C64A9E27E6202400333753 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		E7C69D5027E012F700A3ED94 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		E7CD0EC827F5250E00EF0B15 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		E7CD0ECA27F535F900EF0B15 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 		E7DA8D4927E75458002BCFE7 /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
 		E7DA8D4B27E75D04002BCFE7 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
 		E7DA8D4E27E75D62002BCFE7 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
@@ -1169,6 +1171,7 @@
 			children = (
 				E7C64A8D27E34C3A00333753 /* SignUpControllerFactory.swift */,
 				E7B9462627ED1BC400F37A72 /* LoginControllerFactory.swift */,
+				E7CD0ECA27F535F900EF0B15 /* WelcomeControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1940,6 +1943,7 @@
 				E7C64A8B27E34B2D00333753 /* RemoteAddAccountFactory.swift in Sources */,
 				E7C64A9F27E6202500333753 /* MainQueueDispatchDecorator.swift in Sources */,
 				E7C64A9A27E40C5800333753 /* EnvironmentHelper.swift in Sources */,
+				E7CD0ECB27F535F900EF0B15 /* WelcomeControllerFactory.swift in Sources */,
 				E7DA8D5227E8B9C6002BCFE7 /* ApiUrlFactory.swift in Sources */,
 				E7C64A4127E2B6CE00333753 /* AppDelegate.swift in Sources */,
 				E7B9462527ED1B3800F37A72 /* RemoteAuthenticationFactory.swift in Sources */,

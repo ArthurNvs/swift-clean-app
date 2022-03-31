@@ -23,7 +23,7 @@ class WelcomeRouterTests: XCTestCase {
 extension WelcomeRouterTests {
   func makeSut() -> (sut: WelcomeRouter, nav: NavigationController) {
     let loginFactorySpy = LoginFactorySpy()
-    let signUpFactorySpy = SignUpFactorySpy()
+    let signUpFactorySpy = SignUpFactorySpy() 
     let nav = NavigationController()
     let sut = WelcomeRouter(nav: nav, loginFactory: loginFactorySpy.makeLoginViewController, signUpFactory: signUpFactorySpy.makeSignUpViewController)
     return (sut, nav)
